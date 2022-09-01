@@ -47,7 +47,7 @@ public class WebController {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> responseEntityStr =
                 restTemplate.postForEntity(API_ENDPOINT + "/oauth2/token", request, String.class);
-
+        System.out.println(responseEntityStr.getBody());
         return responseEntityStr;
 
     }
